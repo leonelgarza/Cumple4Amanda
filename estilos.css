@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+body {
+  background: linear-gradient(to top, #fce4ec, #ffd7e5);
+  /*font-family: 'Bonheur Royale', 'Regular 400';*/
+  font-family: 'Quicksand', sans-serif;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Tarjeta */
+.invitacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh; 
+
+  background-color: rgba(255, 255, 255, 0.95);
+  background: url('images/Background.jpeg') center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  z-index: 1;
+  position: absolute;
+}
+
+.invitacion h1 {
+  font-size: 1.25em;
+  color: #976399;
+  text-shadow: 
+    -1px -1px 0 ivory,  
+     1px -1px 0 ivory,  
+    -1px  1px 0 ivory,  
+     1px  1px 0 ivory; 
+  margin: 0px 5px;
+  margin-top: 5px;
+}
+
+.invitacion .titulo-cuento {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.75em;
+  color: #976399;
+  text-shadow: 
+    -1px -1px 0 white,  
+     1px -1px 0 white,  
+    -1px  1px 0 white,  
+     1px  1px 0 white; 
+  margin: 0px 5px;
+  margin-top: 5px;
+}
+
+.invitacion h2 {
+  font-size: 2.2em;
+  color: #EC6AAE;
+  margin: 10px 0;
+  font-weight: 700;
+  text-shadow: 
+    -1px -1px 0 white,  
+     1px -1px 0 white,  
+    -1px  1px 0 white,  
+     1px  1px 0 white; 
+}
+
+.invitacion p {
+  font-size: 1.0em;
+  margin: 0px 0;
+  color: black;
+  font-weight: 700;
+  text-shadow: 
+    -1px -1px 0 white,  
+     1px -1px 0 white,  
+    -1px  1px 0 white,  
+     1px  1px 0 white;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #da89eb;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: background 0.3s;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000;
+}
+
+#botonMusica {
+  background-color: #f8c0ec;
+  color: black;
+  border: #ec407a;
+  margin-top: 5px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#botonMusica:hover {
+  background-color: #e2b4eb;
+}
+
+.boton:hover {
+  background-color: #ec407a;
+}
+
+.whatsapp {
+  background-color:  #e2b4eb;
+  margin-left: 10px;
+}
+
+.whatsapp:hover {
+  background-color: #da89eb;
+}
+
+.abajo {
+  margin-top: auto; /* ⬅️ empuja este div hasta el final */
+  margin-bottom: 20px;
+}
+
+/* Globos animados */
+.globos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.globo {
+  width: 40px;
+  height: 55px;
+  border-radius: 50% 50% 45% 45%;
+  position: absolute;
+  bottom: -70px;
+  animation: flotar 10s infinite ease-in;
+  opacity: 0.8;
+}
+
+.rojo { background: #f44336; left: 20%; animation-delay: 0s; }
+.azul { background: #2196f3; left: 40%; animation-delay: 2s; }
+.verde { background: #4caf50; left: 60%; animation-delay: 4s; }
+.rosa { background: #e91e63; left: 80%; animation-delay: 6s; }
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .invitacion {
+    padding: 20px;
+  }
+
+  .invitacion h1 {
+    font-size: 1.8em;
+  }
+
+  .invitacion h2 {
+    font-size: 1.6em;
+  }
+
+  .invitacion p {
+    font-size: 1em;
+  }
+
+  .boton {
+    font-size: 0.9em;
+    padding: 10px 16px; 
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000;
+  }
+
+  .whatsapp {
+    display: block;
+    margin: 10px auto 0 auto;
+  }
+}

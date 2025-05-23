@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>🎂¡Amanda cumple 4 años!🎂</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Globos animados -->
+  <div class="globos">
+    <div class="globo rojo"></div>
+    <div class="globo azul"></div>
+    <div class="globo verde"></div>
+    <div class="globo rosa"></div>
+  </div>
+
+  <!-- Tarjeta de invitación -->
+  <div class="invitacion">
+    <audio id="musicaFondo" autoplay loop>
+      <source src="audio/musica.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio HTML5.
+    </audio>
+     <p><button id="botonMusica" onclick="document.getElementById('musicaFondo').paused ? document.getElementById('musicaFondo').play() : document.getElementById('musicaFondo').pause()">🔊</button></p>
+    
+    <h1 class="titulo-cuento">Habia una vez...</h1>
+    <h1>en un pais muy lejano</h1>
+    <h1>una princesa llamada</h1>
+    <h2>Amanda</h2>
+    <p>¡Que cumple 4 años!</p>
+    <div class="abajo">
+        <p>Te invitamos a festejar<br>
+        <p>📅 Sábado 21 de junio de 2025<br>
+           🕒 11:00 AM<br>
+           📍 Salón “WonderFun Party Place”</p>
+        <p><a href="https://maps.app.goo.gl/XVDotA21KkrE5mUX8" class="boton">Ver Ubicación</a></p>
+        <a href="https://wa.me/5218117876235?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20fiesta%20de%20Amanda%20🎉" class="boton whatsapp" target="_blank">Confirmar por WhatsApp</a> 
+        
+    </div>
+</div>
+
+<script>
+  window.addEventListener('click', function() {
+    const musica = document.getElementById('musicaFondo');
+    if (musica.paused) {
+      musica.play().catch(e => {
+        console.log('No se pudo reproducir el audio:', e);
+      });
+    }
+  }, { once: true });
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
